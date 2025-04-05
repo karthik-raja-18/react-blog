@@ -1,48 +1,49 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
-// const cors = require('cors');
+const cors = require('cors');
+require('dotenv').config();
+
 const app = express();
 
-
-const cors = require('cors');
+// Middleware
 app.use(cors({
-  origin: 'https://blog-app-rose-kappa.vercel.app/',
+  origin: 'https://blog-app-rose-kappa.vercel.app',
   credentials: true
 }));
-
-require('dotenv').config();
-const PORT = process.env.PORT;
-const MONGO_URL = process.env.MONGODB_URL;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
-
-
-
 app.use(express.json());
 
+// Environment Variables
+const PORT = process.env.PORT || 4000;
+const MONGO_URL = process.env.MONGODB_URL;
+
 // MongoDB connection
-mongoose.connect('process.env.MONGODB_URL', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-}).then(() => console.log('Connected to MongoDB'))
-  .catch(err => console.error('Could not connect to MongoDB:', err));
+mongoose.connect(MONGO_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+}).then(() => console.log('✅ Connected to MongoDB'))
+  .catch(err => console.error('❌ Could not connect to MongoDB:', err));
+
+// Start the server
+app.listen(PORT, () => {
+  console.log(`🚀 Server is running on port ${PORT}`);
+});
 
 // User schema and model
 const userSchema = new mongoose.Schema({
-    username: {
-      type: String,
-      required: true,
-      unique: true,
-    },
-    password: {
-      type: String,
-      required: true,
-    },
+  username: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
 });
 
 const User = mongoose.model('User', userSchema);
+
 
 // Blog schema and model
 const BlogSchema = new mongoose.Schema({
