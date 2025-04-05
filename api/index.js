@@ -10,8 +10,9 @@ app.use(cors({
   origin: 'https://blog-app-rose-kappa.vercel.app/',
   credentials: true
 }));
-
-const PORT = process.env.PORT || 8080;
+require('dotenv').config();
+const PORT = process.env.PORT;
+const MONGO_URL = process.env.MONGODB_URL;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
