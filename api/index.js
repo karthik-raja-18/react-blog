@@ -10,6 +10,7 @@ app.use(cors({
   origin: 'https://blog-app-rose-kappa.vercel.app/',
   credentials: true
 }));
+
 require('dotenv').config();
 const PORT = process.env.PORT;
 const MONGO_URL = process.env.MONGODB_URL;
@@ -22,7 +23,7 @@ app.listen(PORT, () => {
 app.use(express.json());
 
 // MongoDB connection
-mongoose.connect('mongodb://127.0.0.1:27017/Main_Blog', {
+mongoose.connect('process.env.MONGODB_URL', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => console.log('Connected to MongoDB'))
