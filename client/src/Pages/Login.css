@@ -1,0 +1,88 @@
+/* Login Page Styling */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0a0a0a;
+}
+
+.login-form {
+  background-color: #141414;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  color: transparent;
+  background: linear-gradient(to right, #00ffff, #08ffc8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  margin-bottom: 25px;
+}
+
+.input-container {
+  margin-bottom: 18px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background-color: #222;
+  color: #f0f0f0;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.input-field:focus {
+  border-color: #00f2fe;
+  box-shadow: 0 0 8px rgba(0, 242, 254, 0.3);
+  outline: none;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background: linear-gradient(to right, #00ffcb, #0acffe);
+  color: #111;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+.register-link-text {
+  color: #03dac6;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.register-link-text:hover {
+  color: #00e5ff;
+  text-decoration: underline;
+}

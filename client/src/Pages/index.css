@@ -1,0 +1,91 @@
+/* Index Page Styles */
+.index-container {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+/* Fade-in animation for the whole page */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Welcome Title */
+.welcome-title {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #00fff0, #0072ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+  font-family: 'Poppins', sans-serif;
+  animation: textSlide 1.5s ease-out;
+}
+
+/* Slide in animation */
+@keyframes textSlide {
+  0% {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Welcome Message */
+.welcome-message {
+  font-size: 1.4rem;
+  max-width: 600px;
+  color: #cccccc;
+  margin-bottom: 40px;
+  font-family: 'Roboto', sans-serif;
+  animation: fadeInMessage 2.5s ease-in-out;
+}
+
+/* Message animation */
+@keyframes fadeInMessage {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Get Started Button */
+.get-started-button {
+  font-size: 1.1rem;
+  padding: 14px 30px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: buttonFadeIn 3s ease-in-out;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+}
+
+.get-started-button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(0, 242, 254, 0.5);
+  background: linear-gradient(to right, #00ffcb, #0acffe);
+  color: #111;
+}
+
+/* Button animation */
+@keyframes buttonFadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

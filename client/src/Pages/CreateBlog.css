@@ -1,0 +1,122 @@
+/* General Page Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #0a0a0a; /* Slightly warmer black */
+  color: #f5f5f5; /* Soft white for easy readability */
+  line-height: 1.6;
+}
+
+/* Create Blog Form Styling */
+.create-blog-form {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #121212; /* Deeper charcoal */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.1); /* Gentle hot pink glow */
+}
+
+/* Header Styling */
+.create-blog-form h2 {
+  text-align: center;
+  background: linear-gradient(to right, #ff6a00, #ee0979); /* Vibrant text gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.6rem;
+  margin-bottom: 25px;
+}
+
+/* Form Group Styling */
+.create-blog-form .form-group {
+  margin-bottom: 20px;
+}
+
+/* Label Styling */
+.create-blog-form label {
+  font-size: 1.1rem;
+  color: #bbb;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Input, Textarea, and Select Styling */
+.create-blog-form input,
+.create-blog-form textarea,
+.create-blog-form select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #333;
+  border-radius: 6px;
+  background-color: #1c1c1c;
+  color: #f1f1f1;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Textarea */
+.create-blog-form textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+/* Select Dropdown */
+.create-blog-form select {
+  padding: 12px;
+  font-size: 1.1rem;
+}
+
+/* Focus Effects */
+.create-blog-form input:focus,
+.create-blog-form textarea:focus,
+.create-blog-form select:focus {
+  border-color: #ff416c;
+  box-shadow: 0 0 8px rgba(255, 65, 108, 0.4);
+  outline: none;
+}
+
+/* Button Styling */
+.create-blog-form button {
+  background: linear-gradient(to right, #ff416c, #ff4b2b); /* Fiery gradient */
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button Hover */
+.create-blog-form button:hover {
+  background: linear-gradient(to right, #00c9ff, #92fe9d); /* Fresh cyan to green */
+  color: #111;
+}
+
+/* Disabled Input */
+.create-blog-form input[type='text']:disabled,
+.create-blog-form textarea:disabled,
+.create-blog-form select:disabled {
+  background-color: #444;
+}
+
+/* Placeholder Styling */
+.create-blog-form input::placeholder,
+.create-blog-form textarea::placeholder {
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .create-blog-form {
+    padding: 20px;
+  }
+
+  .create-blog-form h2 {
+    font-size: 2rem;
+  }
+}
