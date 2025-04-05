@@ -20,7 +20,7 @@ const HomePage = () => {
   // Fetch latest 3 blogs
   const fetchLatestBlogs = async () => {
     try {
-      const response = await fetch('http://localhost:4000/blogs/latest');
+      const response = await fetch('https://react-blog-j51y.onrender.com/blogs/latest');
       if (!response.ok) {
         throw new Error('Failed to fetch latest blogs');
       }
@@ -34,7 +34,7 @@ const HomePage = () => {
   // Fetch all blogs for the feed
   const fetchAllBlogs = async () => {
     try {
-      const response = await fetch('http://localhost:4000/blogs');
+      const response = await fetch('http://https://react-blog-j51y.onrender.com/blogs');
       if (!response.ok) {
         throw new Error('Failed to fetch blogs');
       }
@@ -55,7 +55,7 @@ const HomePage = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:4000/blogs/search?q=${searchQuery}`);
+      const response = await fetch(`http://https://react-blog-j51y.onrender.com/blogs/search?q=${searchQuery}`);
       if (!response.ok) {
         throw new Error('Search failed');
       }

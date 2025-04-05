@@ -17,7 +17,7 @@ function App() {
 
   // Fetch posts from the backend when the component mounts
   useEffect(() => {
-    fetch("http://localhost:4000/api/posts")
+    fetch("https://react-blog-j51y.onrender.com/api/posts")
       .then((response) => response.json())
       .then((data) => setPosts(data))
       .catch((err) => console.error("Error fetching posts:", err));

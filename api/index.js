@@ -320,7 +320,7 @@ router.post('/login', async (req, res) => {
   });
   const fetchPosts = async () => {
     try {
-      const response = await fetch('http://localhost:4000/api/posts');
+      const response = await fetch('http://https://react-blog-j51y.onrender.com/api/posts');
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -373,5 +373,5 @@ app.post('/register', async (req, res) => {
 });
 
 app.listen(4000, () => {
-    console.log('Server is running on port http://localhost:4000');
+    console.log('Server is running on port http://https://react-blog-j51y.onrender.com');
 });

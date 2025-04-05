@@ -30,7 +30,7 @@ const ViewProfilePage = () => {
         return;
       }
 
-      const response = await fetch(`http://localhost:4000/users/${username}`, {
+      const response = await fetch(`http://https://react-blog-j51y.onrender.com/users/${username}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -67,7 +67,7 @@ const ViewProfilePage = () => {
         formData.append('profileImage', newProfileImage);
       }
 
-      const response = await fetch(`http://localhost:4000/users/update/${userDetails.username}`, {
+      const response = await fetch(`http://https://react-blog-j51y.onrender.com/users/update/${userDetails.username}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -110,7 +110,7 @@ const ViewProfilePage = () => {
         <div className="profileDetails">
           <p><strong>Username:</strong> {userDetails.username}</p>
           {userDetails.profileImage && (
-            <img src={`http://localhost:4000/uploads/${userDetails.profileImage}`} alt="Profile" />
+            <img src={`http://https://react-blog-j51y.onrender.com/uploads/${userDetails.profileImage}`} alt="Profile" />
           )}
 
           <form onSubmit={handleUpdateProfile}>

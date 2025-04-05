@@ -35,7 +35,7 @@ const CreateBlogPage = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:4000/blogs/create', {
+      const response = await fetch('https://react-blog-j51y.onrender.com/blogs/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -14,7 +14,7 @@ const BlogDetailPage = () => {
   // Fetch blog detail by ID
   const fetchBlogDetail = async () => {
     try {
-      const response = await fetch(`http://localhost:4000/blogs/${id}`);
+      const response = await fetch(`http://https://react-blog-j51y.onrender.com/blogs/${id}`);
       if (!response.ok) {
         throw new Error('Failed to fetch blog details');
       }
@@ -36,7 +36,7 @@ const BlogDetailPage = () => {
         <p><strong>Author:</strong> {blog.author}</p>
         <p><strong>Category:</strong> {blog.category}</p>
         <p>{blog.content}</p>
-        {blog.file && <img src={`http://localhost:4000/${blog.file}`} alt="Blog File" />}
+        {blog.file && <img src={`https://react-blog-j51y.onrender.com/${blog.file}`} alt="Blog File" />}
         <button className="backButton" onClick={() => navigate('/home')}>Back to Home</button>
       </div>
     </div>
