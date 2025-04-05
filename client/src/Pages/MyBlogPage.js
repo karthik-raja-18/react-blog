@@ -15,7 +15,7 @@ const MyBlogPage = () => {
   // Fetch blogs from backend
   const fetchBlogs = async () => {
     try {
-      const response = await fetch('https://react-blog-j51y.onrender.com/blogs');
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/blogs`);
       const data = await response.json();
       setBlogs(data.blogs);
     } catch (error) {
@@ -40,7 +40,7 @@ const MyBlogPage = () => {
   // Handle blog update
   const handleUpdate = async (id) => {
     try {
-      const response = await fetch(`https://react-blog-j51y.onrender.com/blogs/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/blogs/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updatedContent),
@@ -62,7 +62,7 @@ const MyBlogPage = () => {
   // Handle blog deletion
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`https://react-blog-j51y.onrender.com/blogs/${id}`, { method: 'DELETE' });
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/blogs/${id}`, { method: 'DELETE' });
 
       const result = await response.json();
 

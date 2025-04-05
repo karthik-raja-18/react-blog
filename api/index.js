@@ -323,7 +323,7 @@ router.post('/login', async (req, res) => {
   });
   const fetchPosts = async () => {
     try {
-      const response = await fetch('https://react-blog-j51y.onrender.com/api/posts');
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/posts`);
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -376,5 +376,5 @@ app.post('/register', async (req, res) => {
 });
 
 app.listen(4000, () => {
-    console.log('Server is running on port https://react-blog-j51y.onrender.com');
+    console.log(`Server is running on port ${process.env.REACT_APP_API_URL}`);
 });

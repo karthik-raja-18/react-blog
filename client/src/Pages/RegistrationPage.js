@@ -12,7 +12,7 @@ export default function RegisterPage() {
     ev.preventDefault();
 
     try {
-      const response = await fetch("https://react-blog-j51y.onrender.com/register", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/register`, {
         method: "POST",
         body: JSON.stringify({ username, password, email }), // Include email in the request body
         headers: { "Content-Type": "application/json" },

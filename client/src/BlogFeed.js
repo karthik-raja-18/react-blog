@@ -8,7 +8,7 @@ const BlogFeed = () => {
     useEffect(() => {
         const fetchBlogs = async () => {
             try {
-                const response = await fetch('https://react-blog-j51y.onrender.com/feed');
+                const response = await fetch(`${process.env.REACT_APP_API_URL}/feed`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch blogs');
                 }
