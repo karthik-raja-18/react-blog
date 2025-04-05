@@ -15,10 +15,11 @@ app.use(express.json());
 
 // Environment Variables
 const PORT = process.env.PORT || 4000;
+
 const MONGO_URL = process.env.MONGODB_URL;
 
 // MongoDB connection
-mongoose.connect(MONGO_URL, {
+mongoose.connect(process.env.MONGODB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => console.log('✅ Connected to MongoDB'))
