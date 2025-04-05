@@ -8,9 +8,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'https://blog-app-rose-kappa.vercel.app',
+  origin: 'https://react-blog-wine-six.vercel.app',
   credentials: true
 }));
+
 app.use(express.json());
 
 // Environment Variables
